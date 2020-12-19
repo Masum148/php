@@ -1,0 +1,16 @@
+if _name_ == '_main_':
+    list = []
+    y = int(input())
+    for i in range(y):
+        name = input()
+        score = float(input())
+
+        list.append([score, name])
+
+    list.sort()
+    first = [i for i in list if i[0] != list[0][0]]
+    second = [j for j in first if j[0] == first[0][0]]
+
+    second.sort(key = lambda x: x[1])
+    for i in range(len(second)):
+        print(second[i][1])
